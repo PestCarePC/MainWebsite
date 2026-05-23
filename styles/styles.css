@@ -1,0 +1,40 @@
+.hero {
+  background: #15803d;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: white;
+  color: #15803d;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
