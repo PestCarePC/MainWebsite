@@ -23,7 +23,7 @@
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800 relative">
+<body class="bg-[#F5F1E8] text-slate-700 relative">
 
   <div class="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2 items-end">
     
@@ -47,26 +47,39 @@
 
   </div>
 
-  <div class="fixed inset-0 pointer-events-none opacity-10 flex items-center justify-center z-0">
-    <img src="./Images/PESTCARElogoImage.png" alt="Watermark" class="w-1/2">
-  </div>
+<div class="fixed inset-0 pointer-events-none flex items-center justify-center z-[1]">
+  <img
+    src="./Images/PESTCARElogoImage.png"
+    alt="Watermark"
+   class="w-[85%] md:w-[65%] lg:w-[50%]
+opacity-12 md:opacity-18
+brightness-90
+contrast-100"
+  >
+</div>
+  <div class="relative z-[10]">
+
+    <section class="relative text-white py-16 md:py-24 px-6 text-center overflow-hidden min-h-[400px] md:min-h-[600px] flex items-center justify-center">
+
+  <div class="absolute inset-0 bg-green-900/90"></div>
 
   <div class="relative z-10">
+    <img src="./Images/PESTCARElogoImage.png"
+         class="h-40 md:h-64 w-auto drop-shadow-2xl mx-auto mb-4">
 
-    <section class="relative text-white py-16 px-6 text-center overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center justify-center">
-      <div class="absolute inset-0 bg-green-700/90"></div>
-      <div class="relative z-10">
-        <div class="flex items-center justify-center mb-4">
-          <img src="./Images/PESTCARElogoImage.png" alt="Logo" class="h-48 md:h-64 w-auto drop-shadow-2xl">
-        </div>
-        <p class="text-lg mb-6 max-w-lg mx-auto">Professional, Safe & Reliable Pest Control Services for Homes & Businesses.</p>
-        <a href="#contact" class="bg-white text-green-700 px-8 py-3 rounded-xl font-bold shadow-xl hover:bg-gray-100 transition">
-          Get a Free Quote
-        </a>
-      </div>
-    </section>
+    <p class="text-base md:text-xl mb-6 max-w-lg mx-auto">
+      Professional, Safe & Reliable Pest Control Services for Homes & Businesses.
+    </p>
 
-<section class="relative py-24 px-6 overflow-hidden">
+    <a href="#contact"
+       class="bg-white text-green-800 px-6 md:px-8 py-3 rounded-xl font-bold shadow-xl hover:bg-gray-100 transition">
+      Get a Free Quote
+    </a>
+  </div>
+
+</section>
+
+<section class="relative py-24 px-6 overflow-hidden bg-[#F3EFE7]/80">
 
   <!-- Background Slideshow
   <div class="absolute inset-0">
@@ -89,15 +102,15 @@
     <div class="bg-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
          style="background-image: url('PC Images/WhatsApp Image 2026-04-07 at 11.08.51 AM.jpeg'); opacity:0;"></div>
 
-     
     <div class="absolute inset-0 bg-black/60"></div>
 
-  </div> -->
+  </div>
+  -->
 
   <!-- Content -->
-  <div class="relative z-10 w-full max-w-3xl mx-auto text-center text-black">
+  <div class="relative z-10 w-full max-w-3xl mx-auto text-center text-slate-700">
 
-    <h2 class="text-4xl font-black mb-6">About Us</h2>
+    <h2 class="text-4xl font-black mb-6 text-green-900">About Us</h2>
 
     <p class="text-lg leading-relaxed mb-6">
       At Pest Care Pest Control, we provide expert pest management solutions for both residential and commercial properties. We understand that a pest-free environment is essential for your peace of mind.
@@ -107,6 +120,7 @@
       Our treatments are strictly safe, effective, and tailored to eliminate infestations at the source while ensuring the total protection of your family, pets, and the surrounding environment.
     </p>
 
+    <!-- Badges -->
     <div class="mt-8 flex flex-wrap justify-center gap-4">
 
       <div class="flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-lg">
@@ -121,55 +135,124 @@
 
     </div>
 
+    <!-- Services Dropdown -->
+    <div class="mt-10 max-w-2xl mx-auto">
+
+      <details class="group bg-white shadow-lg rounded-2xl border border-green-200 overflow-hidden">
+
+        <summary class="flex items-center justify-between px-6 py-4 cursor-pointer font-bold text-lg text-green-800 hover:bg-green-100 transition">
+          Find More of Our Services
+
+          <svg class="w-5 h-5 transition-transform duration-300 group-open:rotate-180"
+               xmlns="http://www.w3.org/2000/svg"
+               fill="none"
+               viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7" />
+          </svg>
+
+        </summary>
+
+        <div class="bg-gray-50 px-6 py-6">
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left text-gray-700">
+
+            <div>✔ General Pest Control</div>
+            <div>✔ Cockroach Control</div>
+            <div>✔ Ant Control</div>
+            <div>✔ Rodent Control</div>
+            <div>✔ Termite Treatment</div>
+            <div>✔ Bed Bug Treatment</div>
+            <div>✔ Flea Control</div>
+            <div>✔ Tick Control</div>
+            <div>✔ Fly Control</div>
+            <div>✔ Mosquito Control</div>
+            <div>✔ Spider Control</div>
+            <div>✔ Wasp & Bee Removal</div>
+            <div>✔ Bird Proofing</div>
+            <div>✔ Fumigation</div>
+            <div>✔ Fogging Services</div>
+            <div>✔ Commercial Pest Management</div>
+
+          </div>
+
+        </div>
+
+      </details>
+
+    </div>
+
   </div>
 
 </section>
 
-    <section class="bg-gray-100/80 backdrop-blur-sm py-16 px-6">
-      <h2 class="text-3xl font-bold text-center mb-10 text-green-800">Our Expert Services</h2>
-      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
-          <h3 class="font-bold text-xl mb-3 text-green-700">General Pest Control</h3>
-          <p class="text-gray-600">Cockroaches, ants, spiders, flies, and other crawling or flying insects.</p>
-        </div>
-        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
-          <h3 class="font-bold text-xl mb-3 text-green-700">Rodent Control</h3>
-          <p class="text-gray-600">Specialized baiting and trapping for effective rat and mouse removal.</p>
-        </div>
-        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
-          <h3 class="font-bold text-xl mb-3 text-green-700">Fumigation & Fogging</h3>
-          <p class="text-gray-600">High-intensity treatments designed for heavy infestations and large spaces.</p>
-        </div>
+<section class="bg-[#E9E2D5]/80 py-16 md:py-24 px-6">
+
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-green-900">
+    Our Expert Services
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto">
+
+    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+      <img src="PC Images/pestCareImage.png" class="w-full h-48 md:h-56 object-cover">
+      <div class="p-6 md:p-8">
+        <h3 class="font-bold text-lg md:text-xl text-green-800">General Pest Control</h3>
+        <p class="text-sm md:text-base text-slate-600 mt-2">
+          Cockroaches, ants, spiders, flies, and more.
+        </p>
       </div>
-    </section>
+    </div>
+
+    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+      <img src="PC Images/RodentControl.png" class="w-full h-48 md:h-56 object-cover">
+      <div class="p-6 md:p-8">
+        <h3 class="font-bold text-lg md:text-xl text-green-800">Rodent Control</h3>
+        <p class="text-sm md:text-base text-slate-600 mt-2">
+          Safe and effective rat and mouse removal.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition overflow-hidden">
+      <img src="PC Images/fumigation.png" class="w-full h-48 md:h-56 object-cover">
+      <div class="p-6 md:p-8">
+        <h3 class="font-bold text-lg md:text-xl text-green-800">Fumigation</h3>
+        <p class="text-sm md:text-base text-slate-600 mt-2">
+          Heavy infestation and industrial treatments.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
     <section class="py-16 px-6 max-w-4xl mx-auto">
-      <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-green-50">
-        <h2 class="text-3xl font-bold mb-8 text-center text-green-800">Why Choose Us?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="flex items-center gap-3">
-            <span class="text-green-600 font-bold text-xl">✔</span>
-            <p class="font-medium">Certified Technicians</p>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-green-600 font-bold text-xl">✔</span>
-            <p class="font-medium">Safe for Children & Pets</p>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-green-600 font-bold text-xl">✔</span>
-            <p class="font-medium">Affordable Pricing</p>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-green-600 font-bold text-xl">✔</span>
-            <p class="font-medium">Service Certificates Provided</p>
-          </div>
-        </div>
-      </div>
+      <div class="bg-emerald-50 p-6 md:p-10 rounded-3xl shadow-2xl border border-emerald-200">
+
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-green-900">
+    Why Choose Us?
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-slate-900">
+
+    <div>✔ Certified Technicians</div>
+    <div>✔ Safe for Children & Pets</div>
+    <div>✔ Affordable Pricing</div>
+    <div>✔ Service Certificates Provided</div>
+
+  </div>
+
+</div>
     </section>
 
 
 
-    <section id="contact" class="bg-green-700 text-white py-20 px-6 text-center relative">
+    <section id="contact" class="bg-green-900/90 text-white py-20 px-6 text-center relative">
   
   <div id="success-toast" class="fixed top-10 left-1/2 -translate-x-1/2 z-[100] bg-white text-green-700 px-8 py-4 rounded-2xl shadow-2xl border-2 border-green-500 flex items-center gap-3 transition-all duration-500 opacity-0 pointer-events-none translate-y-[-20px]">
     <span class="text-2xl">✅</span>
@@ -188,13 +271,13 @@
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
     <div class="grid md:grid-cols-2 gap-4">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-4 rounded-xl text-gray-800 outline-none">
-      <input type="text" name="location" placeholder="Your Area/Location" required class="w-full p-4 rounded-xl text-gray-800 outline-none">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-4 rounded-xl text-black placeholder:text-black outline-none">
+      <input type="text" name="location" placeholder="Your Area/Location" required class="w-full p-4 rounded-xl text-black placeholder:text-black outline-none">
     </div>
 
     <div class="grid md:grid-cols-2 gap-4">
-      <input type="email" name="email" placeholder="Email Address (e.g. john@example.com)"  required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Please enter a valid email address" class="w-full p-4 rounded-xl text-gray-800 outline-none">
-      <select name="property_type" required class="w-full p-4 rounded-xl text-gray-800 outline-none">
+      <input type="email" name="email" placeholder="Email Address (e.g. john@example.com)"  required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Please enter a valid email address" class="w-full p-4 rounded-xl text-black placeholder:text-black outline-none">
+      <select name="property_type" required class="w-full p-4 rounded-xl text-black placeholder:text-black outline-none">
         <option value="" disabled selected>Property Type?</option>
         <option value="House">House</option>
         <option value="Flat">Flat</option>
@@ -230,18 +313,18 @@
         <option value="Moderate">Moderate</option>
         <option value="Heavy">Heavy Infestation</option>
     </select> -->
-    <!-- <input type="text" name="affected_areas" placeholder="Affected areas (e.g. Kitchen, Garden)" required class="w-full p-4 rounded-xl text-gray-800 outline-none"> -->
+    <!-- <input type="text" name="affected_areas" placeholder="Affected areas (e.g. Kitchen, Garden)" required class="w-full p-4 rounded-xl text-black placeholder:text-black outline-none"> -->
     <textarea
     name="affected_areas"
     rows="4"
     placeholder="Please describe the affected areas (e.g. Kitchen cupboards, pantry, bathroom, roof space, garden, garage, office, or any areas where pests have been seen)"
     required
-    class="w-full p-4 rounded-xl text-gray-800 outline-none resize-none align-top"
+    class="w-full p-4 rounded-xl text-black placeholder:text-black outline-none resize-none align-top"
 ></textarea>
 </div>
       <div class="grid md:grid-cols-2 gap-4">
-    <!-- <input type="text" name="affected_areas" placeholder="Affected areas (e.g. Kitchen, Garden)" required class="w-full p-4 rounded-xl text-gray-800 outline-none"> -->
-    <select name="severity" required class="w-full p-4 rounded-xl text-gray-800 outline-none">
+    <!-- <input type="text" name="affected_areas" placeholder="Affected areas (e.g. Kitchen, Garden)" required class="w-full p-4 rounded-xl text-black placeholder:text-black outline-none"> -->
+    <select name="severity" required class="w-full p-4 rounded-xl text-black placeholder:text-black outline-none">
         <option value="" disabled selected>How bad is it?</option>
         <option value="Few">Few (Light)</option>
         <option value="Moderate">Moderate</option>
@@ -256,7 +339,7 @@
     minlength="10"
     pattern="[0-9]{10}"
     oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)"
-    class="w-full p-4 rounded-xl text-gray-800 outline-none">
+    class="w-full p-4 rounded-xl text-black placeholder:text-black outline-none">
   </div>
 
     <button type="submit" id="submit-btn" class="bg-white text-green-700 px-6 py-4 rounded-xl font-black w-full hover:bg-gray-100 transition transform hover:scale-[1.01]">
