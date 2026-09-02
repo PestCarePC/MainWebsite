@@ -368,72 +368,97 @@ contrast-100">
 
   
   <script>
-    const form = document.getElementById('pest-form');
-    const toast = document.getElementById('success-toast');
-    const btn = document.getElementById('submit-btn');
+  const form = document.getElementById('pest-form');
+  const toast = document.getElementById('success-toast');
+  const btn = document.getElementById('submit-btn');
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault(); // Stop page from reloading
+  // Email Quote
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-      btn.disabled = true;
-      btn.innerText = "SENDING...";
+    btn.disabled = true;
+    btn.innerText = "SENDING...";
 
-      const formData = new FormData(form);
-      const object = Object.fromEntries(formData);
-      object.pest_type = formData.getAll('pest_type[]').join(', ');
-      console.log(object);
-      const json = JSON.stringify(object);
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
 
+    // Get all selected pests
+    object.pest_type = formData.getAll('pest_type').join(', ');
 
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: json
+    console.log(object);
+
+    const json = JSON.stringify(object);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+      .then(async (response) => {
+        if (response.status === 200) {
+
+          // Show Success Toast
+          toast.classList.remove(
+            'opacity-0',
+            'pointer-events-none',
+            'translate-y-[-20px]'
+          );
+
+          toast.classList.add(
+            'opacity-100',
+            'translate-y-0'
+          );
+
+          // Reset Form
+          form.reset();
+
+          // Hide Toast after 5 seconds
+          setTimeout(() => {
+            toast.classList.remove(
+              'opacity-100',
+              'translate-y-0'
+            );
+
+            toast.classList.add(
+              'opacity-0',
+              'pointer-events-none',
+              'translate-y-[-20px]'
+            );
+          }, 5000);
+
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
       })
-        .then(async (response) => {
-          if (response.status == 200) {
-            // Show Success Toast
-            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-[-20px]');
-            toast.classList.add('opacity-100', 'translate-y-0');
+      .catch(error => {
+        console.log(error);
+        alert("Check your internet connection.");
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.innerText = "GET MY QUOTE";
+      });
+  });
 
-            // Reset Form
-            form.reset();
 
-            // Hide Toast after 5 seconds
-            setTimeout(() => {
-              toast.classList.remove('opacity-100', 'translate-y-0');
-              toast.classList.add('opacity-0', 'translate-y-[-20px]');
-            }, 5000);
-          } else {
-            alert("Something went wrong. Please try again.");
-          }
-        })
-        .catch(error => {
-          console.log(error);
-          alert("Check your internet connection.");
-        })
-        .finally(() => {
-          btn.disabled = false;
-          btn.innerText = "GET MY QUOTE";
-        });
-    });
+  // WhatsApp Quote
+  const whatsappBtn = document.getElementById("whatsapp-btn");
 
-    const whatsappBtn = document.getElementById("whatsapp-btn");
+  whatsappBtn.addEventListener("click", () => {
 
-    whatsappBtn.addEventListener("click", () => {
+    // Validate the form first
+    if (!form.reportValidity()) return;
 
-      // Validate the form first
-      if (!form.reportValidity()) return;
+    const data = new FormData(form);
 
-      const data = new FormData(form);
+    // Get all selected pests
+    const pests = data.getAll("pest_type").join(", ");
 
-      const pests = data.getAll("pest_type").join(",");
-
-      const message =
-        `📋 *NEW PEST QUOTE REQUEST*
+    const message =
+      `📋 *NEW PEST QUOTE REQUEST*
 
 *Name:* ${data.get("name")}
 *Location:* ${data.get("location")}
@@ -448,15 +473,16 @@ contrast-100">
 ${data.get("affected_areas")}
 
 ⚠️ *Severity:* ${data.get("severity")}`;
-      const phone = "27671921346";
 
-      window.open(
-        `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
-        "_blank"
-      );
+    const phone = "27671921346";
 
-      </script>
-      </body>
-      
-      </html>
-    });
+    window.open(
+      `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
+
+  });
+</script>
+
+</body>
+</html>
